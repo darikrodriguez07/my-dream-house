@@ -1,16 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import PropertyCard from "@/components/PropertyCard";
+import { properties } from "@/data/properties";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen">
+      <Navbar />
+      <HeroSection />
+      <section id="propiedades" className="container mx-auto px-6 py-20">
+        <h2 className="text-center text-3xl text-foreground sm:text-4xl">
+          Nuestras Propiedades
+        </h2>
+        <p className="mx-auto mt-3 max-w-lg text-center text-muted-foreground">
+          Explora nuestra selección exclusiva de hogares. Cada propiedad tiene un ID único para tu referencia.
+        </p>
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {properties.map((property, i) => (
+            <PropertyCard key={property.id} property={property} index={i} />
+          ))}
+        </div>
+      </section>
+      <footer className="border-t border-border bg-secondary py-10 text-center text-sm text-muted-foreground">
+        © 2026 Hogar Plus. Todos los derechos reservados.
+      </footer>
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
