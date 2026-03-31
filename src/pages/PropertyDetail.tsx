@@ -68,8 +68,15 @@ const PropertyDetail = () => {
             </div>
 
             <div className="mt-10">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                Contactar por esta propiedad
+              <Button
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
+                onClick={() => {
+                  const url = `https://source-capture-flow.lovable.app`;
+                 window.open(url, "_blank");
+                }}
+              >
+                Solicitar reunión de compra
               </Button>
             </div>
           </motion.div>
