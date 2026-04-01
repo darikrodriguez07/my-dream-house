@@ -72,7 +72,7 @@ const PropertyDetail = () => {
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90"
                 onClick={() => {
-                  const url = `https://source-capture-flow.lovable.app`;
+                  const url = `https://formulario-datos.lovable.app`;
                  window.open(url, "_blank");
                 }}
               >
