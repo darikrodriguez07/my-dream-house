@@ -72,7 +72,7 @@ const PropertyDetail = () => {
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90"
                 onClick={() => {
-                  const url = `https://formulario-datos.lovable.app`;
+                  const url = `https://tu-form.lovable.app?client_id=My-Dream-House`;
                  window.open(url, "_blank");
                 }}
               >
